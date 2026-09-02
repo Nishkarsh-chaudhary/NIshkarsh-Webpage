@@ -184,7 +184,7 @@ export default async function CaseStudyPage({
             ))}
           </nav>
           <a className="case-toc-back" href="/case-studies">
-            <ArrowLeft /> All projects
+            <ArrowLeft /> Back to case studies
           </a>
         </aside>
       </div>

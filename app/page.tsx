@@ -306,13 +306,17 @@ export default function Home() {
             'About',
             'Experience',
             'Projects',
+            'Case Studies',
             'Expertise',
             'Education',
             'Contact',
           ].map((x, i) => (
-            <a key={x} href={`#${x.toLowerCase()}`}>
+            <a
+              key={x}
+              href={x === 'Case Studies' ? '/case-studies' : `#${x.toLowerCase()}`}
+            >
               {x}
-              {i === 2 && <sup>+</sup>}
+              {(i === 2 || x === 'Case Studies') && <sup>+</sup>}
             </a>
           ))}
         </nav>
@@ -717,13 +721,14 @@ export default function Home() {
           'About',
           'Experience',
           'Projects',
+          'Case Studies',
           'Expertise',
           'Education',
           'Contact',
         ].map((x) => (
           <a
             key={x}
-            href={`#${x.toLowerCase()}`}
+            href={x === 'Case Studies' ? '/case-studies' : `#${x.toLowerCase()}`}
             onClick={() => setMenu(false)}
           >
             {x}
