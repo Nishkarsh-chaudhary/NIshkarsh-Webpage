@@ -93,3 +93,7 @@ footer h2{line-height:.92}
 
 /* Closed navigation must be completely removed from view. */
 .overlay-menu{visibility:hidden;pointer-events:none;opacity:0;transition:transform .55s,opacity .35s,visibility 0s .55s}.overlay-menu.open{visibility:visible;pointer-events:auto;opacity:1;transition:transform .55s,opacity .35s,visibility 0s}
+
+.studies-hero h1{line-height:.94}
+
+@media(max-width:650px){.loader .loader-stage{width:100%;padding-inline:16px;overflow:visible}.loader-word{left:50%;width:calc(100vw - 32px);max-width:none;font-size:14.5vw!important;letter-spacing:-.065em;transform:translateX(-50%)}}
