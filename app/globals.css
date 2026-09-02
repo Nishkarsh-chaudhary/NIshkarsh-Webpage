@@ -56,7 +56,7 @@ footer h2{line-height:.92}
 .loader:before{left:0;animation-name:curtain-left}.loader:after{right:0;animation-name:curtain-right}
 .loader-stage{position:relative;width:min(92vw,1300px);height:clamp(160px,23vw,360px);display:grid;place-items:center;overflow:visible;text-align:center}
 .loader-stage p{position:absolute;margin:0;font:500 clamp(2.3rem,6vw,6.8rem)/1 var(--font-display);letter-spacing:-.025em;white-space:nowrap;animation:welcome-beat 1.28s ease both}
-.loader-word{position:absolute;display:flex!important;align-items:center;justify-content:center;font:600 clamp(6rem,11vw,13rem)/.78 var(--font-display)!important;letter-spacing:-.07em;white-space:nowrap;transform:scaleX(1)}
+.loader-word{position:absolute;display:flex!important;align-items:center;justify-content:center;max-width:88vw;font:600 clamp(5.5rem,10vw,12rem)/.78 var(--font-display)!important;letter-spacing:-.07em;white-space:nowrap;transform:scaleX(1)}
 .loader-word span{display:inline-block!important;color:#f4f5f2!important;font:inherit!important;animation:letter-assemble 2.65s cubic-bezier(.2,.72,.16,1) .95s both!important}
 .loader-word span:nth-child(1){--ix:-38vw;--iy:18vh;--ox:-17vw;--oy:-50vh;--rot:-28deg}.loader-word span:nth-child(2){--ix:-25vw;--iy:-24vh;--ox:-10vw;--oy:46vh;--rot:18deg}.loader-word span:nth-child(3){--ix:-10vw;--iy:32vh;--ox:-3vw;--oy:-48vh;--rot:-12deg}.loader-word span:nth-child(4){--ix:4vw;--iy:-30vh;--ox:4vw;--oy:48vh;--rot:25deg}.loader-word span:nth-child(5){--ix:27vw;--iy:19vh;--ox:10vw;--oy:-48vh;--rot:-18deg}.loader-word span:nth-child(6){--ix:34vw;--iy:-25vh;--ox:17vw;--oy:46vh;--rot:22deg}.loader-word span:nth-child(7){--ix:12vw;--iy:38vh;--ox:24vw;--oy:-44vh;--rot:-24deg}.loader-word span:nth-child(8){--ix:-30vw;--iy:-36vh;--ox:31vw;--oy:43vh;--rot:16deg}.loader-word span:nth-child(9){--ix:40vw;--iy:30vh;--ox:39vw;--oy:-42vh;--rot:-14deg}
 .loader-word b{font:inherit;color:var(--cyan);opacity:0;animation:period-in .35s 2.15s forwards}
@@ -66,7 +66,7 @@ footer h2{line-height:.92}
 @keyframes letter-assemble{0%{opacity:0;transform:translate(var(--ix),var(--iy)) rotate(var(--rot)) scale(.55)}25%{opacity:1}48%,72%{opacity:1;transform:translate(0,0) rotate(0) scale(1)}100%{opacity:0;transform:translate(var(--ox),var(--oy)) rotate(var(--rot)) scale(.85)}}
 @keyframes period-in{to{opacity:1}}@keyframes tagline-beat{0%{opacity:0;transform:translateY(12px)}25%,70%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-8px)}}
 @keyframes curtain-left{to{transform:translateX(-101%)}}@keyframes curtain-right{to{transform:translateX(101%)}}@keyframes intro-dismiss{to{visibility:hidden}}
-@media(max-width:650px){.loader-stage p{font-size:9vw}.loader-word{font-size:17vw!important;letter-spacing:-.075em;transform:scaleX(1)}.loader-stage small{max-width:85vw;line-height:1.7}}
+@media(max-width:650px){.loader-stage p{font-size:9vw}.loader-word{max-width:90vw;font-size:15.5vw!important;letter-spacing:-.075em;transform:scaleX(1)}.loader-stage small{max-width:85vw;line-height:1.7}}
 @media(prefers-reduced-motion:reduce){.loader{display:none}}
 
 /* Slow-moving stars add depth without competing with the system map. */
