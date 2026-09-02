@@ -48,9 +48,9 @@ const projectImages = [
 ] as const;
 
 export default function Home() {
-  const [menu, setMenu] = useState(false), [study, setStudy] = useState<number | null>(null), [loader, setLoader] = useState(false), [scrolled, setScrolled] = useState(false);
+  const [menu, setMenu] = useState(false), [study, setStudy] = useState<number | null>(null), [loader, setLoader] = useState(true), [scrolled, setScrolled] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
-  useEffect(() => { const first = !sessionStorage.getItem('nc-intro'); sessionStorage.setItem('nc-intro', '1'); const start = requestAnimationFrame(() => setLoader(first)); const t = setTimeout(() => setLoader(false), 4300); const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches; const scroll = () => { setScrolled(scrollY > 40); if (!reduceMotion && heroRef.current) heroRef.current.style.setProperty('--hero-progress', Math.min(scrollY / (innerHeight * .82), 1).toFixed(3)); }; scroll(); addEventListener('scroll', scroll, { passive: true }); return () => { cancelAnimationFrame(start); clearTimeout(t); removeEventListener('scroll', scroll) } }, []);
+  useEffect(() => { const t = setTimeout(() => setLoader(false), 4300); const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches; const scroll = () => { setScrolled(scrollY > 40); if (!reduceMotion && heroRef.current) heroRef.current.style.setProperty('--hero-progress', Math.min(scrollY / (innerHeight * .82), 1).toFixed(3)); }; scroll(); addEventListener('scroll', scroll, { passive: true }); return () => { clearTimeout(t); removeEventListener('scroll', scroll) } }, []);
   useEffect(() => { document.body.style.overflow = (menu || study !== null || loader) ? 'hidden' : ''; return () => { document.body.style.overflow = '' } }, [menu, study, loader]);
   const active = study === null ? null : projects[study];
   return <main id="main-content" ref={heroRef}>
