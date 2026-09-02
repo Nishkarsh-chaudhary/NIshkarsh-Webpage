@@ -15,3 +15,27 @@
 .project-card:hover .brand-visual img{transform:scale(1.035);filter:brightness(0) invert(1)}
 .brand-visual a{position:absolute;z-index:3;left:28px;bottom:28px;display:flex;align-items:center;gap:8px;color:white;text-decoration:none;text-transform:uppercase;font:10px var(--font-mono-custom);letter-spacing:.12em;border-bottom:1px solid var(--cyan);padding-bottom:8px}
 .brand-visual a svg{width:15px}
+.project-visual .source-link{position:absolute;z-index:3;left:28px;bottom:28px;display:flex;align-items:center;gap:8px;color:white;text-decoration:none;text-transform:uppercase;font:10px var(--font-mono-custom);letter-spacing:.12em;border-bottom:1px solid var(--cyan);padding-bottom:8px}
+.project-visual .source-link svg{width:15px}
+
+/* Comfortable multiline rhythm, especially on narrow screens. */
+body{line-height:1.55}
+.hero h1{line-height:.88}
+.stacked{line-height:.94}
+.section-heading h2{line-height:.94}
+.project-copy h3{line-height:1}
+.strengths h3{line-height:1.05}
+footer h2{line-height:.92}
+.overlay-menu>a{line-height:1.12}
+.case-inner h2{line-height:.94}
+
+@media(max-width:650px){
+  .hero h1{line-height:.98}
+  .stacked{line-height:1.05}
+  .section-heading h2{line-height:1.04}
+  .project-copy h3,.strengths h3{line-height:1.08}
+  .overlay-menu>a{line-height:1.18}
+  .case-inner h2{line-height:1.04}
+  footer h2{line-height:1.02}
+  .hero-aside p,.prose p,.section-heading p,.project-copy>p:not(.project-type),.strengths p,.case-columns p,.confidential{line-height:1.75}
+}
