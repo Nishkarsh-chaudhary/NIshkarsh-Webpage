@@ -142,8 +142,8 @@ export default async function CaseStudyPage({
             <small>Technical Project Coordinator</small>
           </span>
         </a>
-        <a href="/#projects" className="case-back">
-          <ArrowLeft /> Back to projects
+        <a href="/" className="case-back">
+          <ArrowLeft /> Back to portfolio
         </a>
       </header>
       <div className="case-shell">
@@ -183,7 +183,7 @@ export default async function CaseStudyPage({
               </a>
             ))}
           </nav>
-          <a className="case-toc-back" href="/#projects">
+          <a className="case-toc-back" href="/case-studies">
             <ArrowLeft /> All projects
           </a>
         </aside>
